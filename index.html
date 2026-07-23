@@ -3,34 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoxCPM Demo</title>
+    <title>VoxCPM Demo Integration</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        html, body {
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #0d1117; /* GitHub Dark Mode Theme */
+            color: #c9d1d9;
+        }
+
+        /* Header Styling */
+        header {
+            padding: 16px 24px;
+            background-color: #161b22;
+            border-bottom: 1px solid #30363d;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            color: #58a6ff;
+            margin-bottom: 6px;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            color: #8b949e;
+        }
+
+        /* Hugging Face App Frame (အလယ်ပိုင်း) */
+        .iframe-container {
+            flex: 1;
             width: 100%;
-            height: 100%;
-            overflow: hidden; /* Scrollbar နှစ်ထပ် မဖြစ်အောင် ထိန်းထားခြင်း */
-            background-color: #0b0f19; /* Dark Mode Background */
+            position: relative;
         }
+
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
+
+        /* Footer Styling (အောက်ဆုံးတွင် အမြဲပေါ်နေမည်) */
+        footer {
+            padding: 12px 24px;
+            background-color: #161b22;
+            border-top: 1px solid #30363d;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #8b949e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px; /* စာသားနှစ်ခုကြား ခြားပေးထားခြင်း */
+            flex-wrap: wrap;
+        }
+
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Direct HF Space URL ကို iframe ထဲ ထည့်ထားခြင်း -->
-    <iframe 
-        src="https://openbmb-voxcpm-demo.hf.space" 
-        allow="autoplay; microphone; camera; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
+    <!-- Header အပိုင်း -->
+    <header>
+        <h1>VoxCPM Demo Web Application</h1>
+        <p>Welcome to the interactive demo. Try out the audio features below!</p>
+    </header>
+
+    <!-- Hugging Face App အပိုင်း -->
+    <div class="iframe-container">
+        <iframe 
+            src="https://openbmb-voxcpm-demo.hf.space" 
+            allow="autoplay; microphone; camera; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Footer အပိုင်း -->
+    <footer>
+        <p>Powered by <a href="https://huggingface.co/openbmb" target="_blank">OpenBMB</a> & Hosted on <a href="https://huggingface.co/spaces/openbmb/VoxCPM-Demo" target="_blank">Hugging Face Spaces</a></p>
+        <span>|</span>
+        <p>Content: <a href="https://t.me/trollmovie123" target="_blank">@trollmovie123 Telegram</a></p>
+    </footer>
 
 </body>
 </html>
