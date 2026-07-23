@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoxCPM Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Scrollbar နှစ်ထပ် မဖြစ်အောင် ထိန်းထားခြင်း */
+            background-color: #0b0f19; /* Dark Mode Background */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Direct HF Space URL ကို iframe ထဲ ထည့်ထားခြင်း -->
+    <iframe 
+        src="https://openbmb-voxcpm-demo.hf.space" 
+        allow="autoplay; microphone; camera; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+
+</body>
+</html>
